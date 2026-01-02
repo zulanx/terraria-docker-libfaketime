@@ -12,8 +12,8 @@ services:
     volumes:
       - ./test/:/opt/terraria/config/
     environment:
-      PUID: "${PUID}"
-      PGID: "${PGID}"
+      PUID: 1000
+      PGID: 1000
     healthcheck:
       test: "nc -vz 127.0.0.1 7777 || exit 1"
       interval: 30s

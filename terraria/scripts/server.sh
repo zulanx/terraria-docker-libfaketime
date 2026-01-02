@@ -37,7 +37,7 @@ echo "Starting server..."
 if [ ! -p "$pipe" ]; then
   mkfifo $pipe
 fi
-tmux new-session -d "/opt/terraria/server/TerrariaServer -config /opt/terraria/server/serverconfig.txt | tee $pipe"
+tmux new-session -d "faketime '2025-12-15 00:00:01' /opt/terraria/server/TerrariaServer -config /opt/terraria/server/serverconfig.txt | tee $pipe"
 
 # Sometimes the server doesn't start immediately and hangs. This basically just pokes it into starting.
 inject "help"

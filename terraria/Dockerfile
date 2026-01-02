@@ -27,7 +27,7 @@ RUN curl -Lo ./Terraria.zip https://terraria.org/api/download/pc-dedicated-serve
     chmod +x ./TerrariaServer*
 
 RUN apt-get update -y &&\
-    apt-get install -y netcat-openbsd bash gosu procps libicu-dev tmux
+    apt-get install -y netcat-openbsd bash gosu procps libicu-dev tmux faketime
 
 ENV PUID="1000"
 ENV PGID="1000"
